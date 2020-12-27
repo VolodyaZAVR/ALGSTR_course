@@ -1,0 +1,2 @@
+C:\Users\hispe\source\repos\course_work\Debug\course_work.exe
+C:\Users\hispe\source\repos\course_work\Debug\course_work.pdb
