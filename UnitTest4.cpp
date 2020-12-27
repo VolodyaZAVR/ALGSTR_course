@@ -71,5 +71,41 @@ namespace UnitTest4
 			calculator.infixToPostfix();
 			Assert::AreEqual(calculator.calculate(), 7.00309);
 		}
+		TEST_METHOD(TestMethod8)
+		{
+			string infix = "cos(1)";
+			calculator = calc(infix);
+			calculator.infixToPostfix();
+			Assert::AreEqual(calculator.calculate(), 0.540302);
+		}
+		
+			TEST_METHOD(TestMethod9)
+		{
+			string infix = "sin(2*pi)";
+			calculator = calc(infix);
+			calculator.infixToPostfix();
+			Assert::AreEqual(calculator.calculate(), -5.30718e-06);
+		}
+			TEST_METHOD(TestMethod10)
+			{
+				string infix = "tg(10)";
+				calculator = calc(infix);
+				calculator.infixToPostfix();
+				Assert::AreEqual(calculator.calculate(), 0.648361);
+			}
+			TEST_METHOD(TestMethod11)
+			{
+				string infix = "ctg(10)";
+				calculator = calc(infix);
+				calculator.infixToPostfix();
+				Assert::AreEqual(calculator.calculate(), 1.54235);
+			}
+			TEST_METHOD(TestMethod12)
+			{
+				string infix = "sqrt(16)";
+				calculator = calc(infix);
+				calculator.infixToPostfix();
+				Assert::AreEqual(int(calculator.calculate()), 4);
+			}
 	};
 }
