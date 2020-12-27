@@ -261,7 +261,7 @@ double calc::calculate()
 			i++;
 			double valuev1 = strtod(result.pop().c_str(), nullptr);
 			double valuev2 = strtod(result.pop().c_str(), nullptr);
-			if (valuev2 == 0.0)
+			if (valuev2 == 0)
 			{
 				throw "Division by zero!!!";
 			}
@@ -287,8 +287,9 @@ double calc::calculate()
 					double_smth << value;
 					double_smth >> temp;
 					result.push(temp);
+					break;
 				}
-				if (p == "cos")
+				else if (p == "cos")
 				{
 					double value = strtod(result.pop().c_str(), nullptr);
 					value = cos(value);
@@ -297,8 +298,9 @@ double calc::calculate()
 					double_smth << value;
 					double_smth >> temp;
 					result.push(temp);
+					break;
 				}
-				if (p == "tg")
+				else if (p == "tg")
 				{
 					double value = strtod(result.pop().c_str(), nullptr);
 					res = tan(value);
@@ -307,8 +309,9 @@ double calc::calculate()
 					double_smth << res;
 					double_smth >> temp;
 					result.push(temp);
+					break;
 				}
-				if (p == "ctg")
+				else if (p == "ctg")
 				{
 					double value = strtod(result.pop().c_str(), nullptr);
 					if (tan(value) == 0.0)
@@ -324,8 +327,9 @@ double calc::calculate()
 					double_smth << res;
 					double_smth >> temp;
 					result.push(temp);
+					break;
 				}
-				if (p == "ln")
+				else if (p == "ln")
 				{
 					double value = strtod(result.pop().c_str(), nullptr);
 					if (value < 0)
@@ -336,8 +340,9 @@ double calc::calculate()
 					double_smth << res;
 					double_smth >> temp;
 					result.push(temp);
+					break;
 				}
-				if (p == "log")
+				else if (p == "log")
 				{
 					double value = strtod(result.pop().c_str(), nullptr);
 					if (value < 0)
@@ -348,8 +353,9 @@ double calc::calculate()
 					double_smth << res;
 					double_smth >> temp;
 					result.push(temp);
+					break;
 				}
-				if (p == "sqrt")
+				else if (p == "sqrt")
 				{
 					double value = strtod(result.pop().c_str(), nullptr);
 					res = sqrt(value);
@@ -358,8 +364,9 @@ double calc::calculate()
 					double_smth << res;
 					double_smth >> temp;
 					result.push(temp);
+					break;
 				}
-				if (p == "exp")
+				else if (p == "exp")
 				{
 					double value = strtod(result.pop().c_str(), nullptr);
 					res = (value);
@@ -368,8 +375,9 @@ double calc::calculate()
 					double_smth << res;
 					double_smth >> temp;
 					result.push(temp);
+					break;
 				}
-				if (p == "abs")
+				else if (p == "abs")
 				{
 					double value = strtod(result.pop().c_str(), nullptr);
 					res = abs(value);
@@ -378,9 +386,9 @@ double calc::calculate()
 					double_smth << res;
 					double_smth >> temp;
 					result.push(temp);
+					break;
 				}
 			}
-			break;
 		}
 	}
 	return strtod(result.pop().c_str(), nullptr);
